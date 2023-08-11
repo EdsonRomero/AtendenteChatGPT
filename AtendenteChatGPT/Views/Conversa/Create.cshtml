@@ -1,0 +1,21 @@
+﻿@model conversa
+
+<h2> Cadastra Conversa</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="atendente">Atendente:</label>
+        <input asp-for="atendente" class="form-control" />
+        <span asp-validation-for="atendente" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="atendido">Cliente:</label>
+        <input asp-for="atendido" class="form-control" />
+        <span asp-validation-for="atendido" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+
+</form>
